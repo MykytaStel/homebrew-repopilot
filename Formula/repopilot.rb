@@ -1,6 +1,6 @@
 # Template used by the release workflow to auto-update the Homebrew tap.
-# 0.26.0, 0ac91153366618de631d15426c5d5ba39b21ad824c2f4535cf33995143baacd5, caede04e89849d0feb2d9d6d7af15fb0cd5b6488ccfe1199d6576594561a8da9, ece9d578b8909e5cdfc0f740f25b6a23a22b1089957f011e62b91c1dde35255b,
-# a5be73996bb72530fee1f88a59e40ccc00bc56464bfcaf21918fed8f3a56c753 are replaced by the update-homebrew-tap CI job.
+# 0.27.0, 4cbba695a1aa3ed85757218545907dc76968a6183cec42a6eb217764e340c9a6, 180102fd1580e32c7527dd1095ba388862a40cc04bcd952249d18a8303d8bf93, 9ccab2230528b636c4357b6272d65bc187a013d8cde73720d903ce4b864793ea,
+# 7538cca583330a7bc18d294a698165c147841182b1507a1e990a2d8fa0ad4e9f are replaced by the update-homebrew-tap CI job.
 #
 # Manual setup (one-time):
 #   1. Create repo MykytaStel/homebrew-repopilot with a Formula/ directory.
@@ -14,28 +14,28 @@
 class Repopilot < Formula
   desc "Local-first CLI for reviewing Git changes before merge"
   homepage "https://github.com/MykytaStel/repopilot"
-  version "0.26.0"
+  version "0.27.0"
   license "MIT OR Apache-2.0"
 
   on_macos do
     on_arm do
       url "https://github.com/MykytaStel/repopilot/releases/download/v#{version}/repopilot-v#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "0ac91153366618de631d15426c5d5ba39b21ad824c2f4535cf33995143baacd5"
+      sha256 "4cbba695a1aa3ed85757218545907dc76968a6183cec42a6eb217764e340c9a6"
     end
     on_intel do
       url "https://github.com/MykytaStel/repopilot/releases/download/v#{version}/repopilot-v#{version}-x86_64-apple-darwin.tar.gz"
-      sha256 "caede04e89849d0feb2d9d6d7af15fb0cd5b6488ccfe1199d6576594561a8da9"
+      sha256 "180102fd1580e32c7527dd1095ba388862a40cc04bcd952249d18a8303d8bf93"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/MykytaStel/repopilot/releases/download/v#{version}/repopilot-v#{version}-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "ece9d578b8909e5cdfc0f740f25b6a23a22b1089957f011e62b91c1dde35255b"
+      sha256 "9ccab2230528b636c4357b6272d65bc187a013d8cde73720d903ce4b864793ea"
     end
     on_intel do
       url "https://github.com/MykytaStel/repopilot/releases/download/v#{version}/repopilot-v#{version}-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "a5be73996bb72530fee1f88a59e40ccc00bc56464bfcaf21918fed8f3a56c753"
+      sha256 "7538cca583330a7bc18d294a698165c147841182b1507a1e990a2d8fa0ad4e9f"
     end
   end
 
